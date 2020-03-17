@@ -20,5 +20,12 @@ class Magazine
     end 
   end 
 
+  # Given a string of magazine's name, this method returns the first magazine object that matches. 
+  def find_by_name(name)
+    Article.all.find do |magazine| 
+      magazine.name == name 
+    end 
+  end 
+  
   
 end
