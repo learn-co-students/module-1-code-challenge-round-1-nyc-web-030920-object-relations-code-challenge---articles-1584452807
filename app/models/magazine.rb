@@ -27,5 +27,12 @@ class Magazine
     end 
   end 
   
+  # Method to return an array strings of the titles of all articles written for that magazine. 
+  def article_titles 
+    Article.all.each do |magazine| 
+      magazine.title 
+    end 
+  end 
+
   
 end
