@@ -20,5 +20,12 @@ class Magazine
     @@all
   end
 
-
+ def contributors
+  #Returns an array of Author instances who have written for 
+  #this magazine
+  Magazine.all.select do |magazine|
+  magazine == self
+  magazine.author
+  end
 end
+

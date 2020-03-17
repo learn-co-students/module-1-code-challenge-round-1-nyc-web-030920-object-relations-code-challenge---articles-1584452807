@@ -28,8 +28,6 @@ def author
 my_articles.author #seems wrong, will revisit
 end
 
-
-
 def magazines
 #returns the magazine for this given article
 my_articles.magazine
