@@ -1,3 +1,4 @@
+require 'pry'
 require_relative '../config/environment.rb'
 
 def reload
@@ -6,6 +7,8 @@ end
 
 
 ###  WRITE YOUR TEST CODE HERE ###
+
+tokien = Author.new("J.R.R Tolkien")
 
 
 
