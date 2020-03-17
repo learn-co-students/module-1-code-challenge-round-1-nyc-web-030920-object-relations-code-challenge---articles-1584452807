@@ -1,8 +1,6 @@
-require 'pry' 
 class Author
   attr_reader :name
-
-
+  
   def initialize(name)
     @name = name
   end
@@ -22,5 +20,4 @@ class Author
   def topic_areas #Returns a unique array of strings with the categories of the magazines the author has contributed to
     magazines.map {|a| a.category}
   end
-
 end

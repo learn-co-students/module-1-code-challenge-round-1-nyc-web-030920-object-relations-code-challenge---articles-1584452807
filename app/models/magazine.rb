@@ -20,15 +20,20 @@ class Magazine
     article_list.map {|a| a.author}
   end
 
-  def article_titles
-    article_list.map {|a| a.titles}
-  end
-
   def find_by_name(name)
     Magazine.all.find {|a| a.name == name}
   end
 
+  def article_titles
+    article_list.map {|a| a.titles}
+  end
+
+  def duplicates(array)
+    dup = array.select {|a| array.count(a) > 1}
+    dup.uniq
+  end
+
   def contributing_authors
-    
+    duplicates(contributors)
   end
 end

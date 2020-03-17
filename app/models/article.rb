@@ -7,7 +7,6 @@ class Article
         @title = title
         Article.all << self
     end
-    
     def self.all
         @@all
     end
