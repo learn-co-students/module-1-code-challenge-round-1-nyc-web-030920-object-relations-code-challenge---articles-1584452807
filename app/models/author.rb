@@ -12,4 +12,19 @@ class Author
   def self.all 
     @@all 
   end 
+  
+  # Method to return an array of Article instances the author has written. 
+  def articles 
+    Article.all.select do |author| 
+      author.author == self 
+    end 
+  end 
+
+  # Method to return a unique array of Magazine instances for which the author has contributed to. 
+  def magazines 
+    Article.all.map do |author| 
+      author.magazine 
+    end 
+  end 
+  
 end
