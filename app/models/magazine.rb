@@ -12,12 +12,23 @@ class Magazine
     @@all
   end
 
-  def article_list
+  def article_list #list of articles with this magazine
     Article.all.select {|a| a.magazine == self}
   end
 
-  def contributors
+  def contributors #list of authors with this magazine
     article_list.map {|a| a.author}
   end
 
+  def article_titles
+    article_list.map {|a| a.titles}
+  end
+
+  def find_by_name(name)
+    Magazine.all.find {|a| a.name == name}
+  end
+
+  def contributing_authors
+    
+  end
 end
