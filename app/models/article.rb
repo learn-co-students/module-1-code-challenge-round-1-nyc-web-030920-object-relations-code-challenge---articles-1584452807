@@ -26,7 +26,10 @@ class Article
         end 
     end 
 
+    def article_titles
 
-end
+    end
+end 
+
 
 
