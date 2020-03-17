@@ -13,4 +13,12 @@ class Magazine
     @@all 
   end 
 
+  # Method to return an array of Author instances who have written for this magazine. 
+  def contributors 
+    Article.all.select do |magazine| 
+      magazine.author == self 
+    end 
+  end 
+
+  
 end
