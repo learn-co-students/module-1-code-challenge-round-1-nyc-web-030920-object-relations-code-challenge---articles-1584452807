@@ -26,5 +26,16 @@ class Author
     end.uniq
   end
 
+  def add_article(magazine, title)
+    Article.new(self, magazine, title)
+  end
+
+  #Returns a unique array of strings 
+  #with the categories of the magazines the author has contributed to
+  def topic_areas
+    self.magazines.map do |magazine_instance|
+      magazine_instance.category
+    end.uniq 
+  end
 
 end

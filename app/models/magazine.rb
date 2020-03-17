@@ -20,10 +20,13 @@ class Magazine
       article_instance.magazine == self 
     end
   end
-  
+
 
   #Returns an array of Author instances who have written for this magazine
   def contributors
+    self.articles.map do |article_instance|
+      article_instance.author 
+    end.uniq
   end
 
 
