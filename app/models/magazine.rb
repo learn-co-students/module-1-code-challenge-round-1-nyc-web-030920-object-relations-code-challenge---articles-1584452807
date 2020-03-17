@@ -19,10 +19,8 @@ class Magazine
     end
   end
 
-  def contributors #returns an array of Author instances who have written for this magazine
-    self.articles.map do |article|
-      article.author
-    end.uniq
+  def contributors #returns unique array of Author instances who have written for this magazine
+    authors.uniq
   end
 
   def self.find_by_name(name) #finds a magazine object that matches the (name)
@@ -31,22 +29,24 @@ class Magazine
     end
   end
 
-  def article_titles
+  def article_titles #returns an array of article titles
     articles.map do |article|
       article.title
     end
   end
 
   
-
-  def contributing_authors #returns an array of authors that have written more than 2 articles for the magazine
-    array = self.articles.map do |article|
+  def authors #(helper method) returns an array of all authors who have written for this magazine DUPLICATES included
+    self.articles.map do |article|
       article.author
     end
-    array.find_all do |e| #finds all duplicate authors
-      array.count(e) > 1
-    end.uniq #lists duplicate authors only once
+  end
 
+
+  def contributing_authors #returns an array of authors that have written more than 2 articles for the magazine
+    authors.find_all do |e|
+      authors.count(e) > 1
+    end.uniq
   end
 
 end
