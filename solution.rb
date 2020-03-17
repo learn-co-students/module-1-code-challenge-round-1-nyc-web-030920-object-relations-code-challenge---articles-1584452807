@@ -29,8 +29,8 @@ class Author
     end 
   
     # Method to create a new Article instance and associates it with that author and that magazine. 
-    def add_article(magazine, title) 
-      Article.new(self, magazine, title) 
+    def add_article(magazine, name) 
+      Article.new(self, magazine, name) 
     end 
   
     # Method to return a unique array of strings with the categories of the magazines the author has contributed to. 
@@ -74,7 +74,7 @@ class Magazine
     # Method to return an array strings of the titles of all articles written for that magazine. 
     def article_titles 
       Article.all.each do |magazine| 
-        magazine.title 
+        magazine.name # I forgot that I named title as name in article. Same can be confirmed in tests.   
       end 
     end 
   
