@@ -37,8 +37,16 @@ class Magazine
     end
   end
 
+  
+
   def contributing_authors #returns an array of authors that have written more than 2 articles for the magazine
-    self.articles
+    array = self.articles.map do |article|
+      article.author
+    end
+    array.find_all do |e| #finds all duplicate authors
+      array.count(e) > 1
+    end.uniq #lists duplicate authors only once
+
   end
 
 end

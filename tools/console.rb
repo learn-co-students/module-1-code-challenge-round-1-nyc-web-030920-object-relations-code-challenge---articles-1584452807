@@ -21,10 +21,13 @@ magazine3 = Magazine.new("GQ", "Fashion")
 article1 = Article.new(author1, magazine1, "Dovetails")
 article2 = Article.new(author1, magazine1, "Building Cabinets")
 article3 = Article.new(author2, magazine1, "Sawing")
+article8 = Article.new(author2, magazine1, "TEST")
+
+
 article4 = Article.new(author3, magazine3, "Suits")
 article5 = Article.new(author3, magazine3, "Pants")
 article6 = Article.new(author3, magazine3, "Shirts")
-article6 = Article.new(author2, magazine2, "How to Drive")
+article7 = Article.new(author2, magazine2, "How to Drive")
 
 
 
