@@ -20,6 +20,6 @@ class Author
   end
 
   def topic_areas
-    articles.map{|article| article.title}.uniq
+    articles.map{|article| article.magazine.category}.uniq
   end
 end

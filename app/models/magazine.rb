@@ -1,4 +1,4 @@
-require "pry"
+
 class Magazine
   attr_accessor :name, :category
 
@@ -12,8 +12,11 @@ class Magazine
     @@all
   end
 
+  def article_titles
+      mag_articles.map{|article| article.title}
+  end
   def mag_articles
-    Article.all.select(|article| article.magazine ==self)
+    Article.all.select{|article| article.magazine ==self}
   end
   def contributors
     mag_articles.map{|article| article.author}
@@ -23,22 +26,21 @@ class Magazine
     Magazine.all.find{|mag| mag.name == name}
   end
 
-  def article_titles
-   mag_articles.map{|article| article.article_titles}
-  end
 
   def author_count
     author_hash= Hash.new(0)
     mag_articles.each do |article|
-      author_hash[article.author.name] += 1
-
-      
+      author_hash[article.author.name] += 1      
     end
     author_hash
   end
   def contributing_authors
-     author_count.map do |author|
-        binding.pry
+    return_arr =[]
+     author_count.each do |author, value|
+        if value > 2
+          return_arr << author
+        end
      end
+     return_arr
   end
 end
