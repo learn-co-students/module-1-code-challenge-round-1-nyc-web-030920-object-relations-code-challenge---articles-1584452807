@@ -1,5 +1,5 @@
 class Author
-  attr_reader :name
+  attr_reader :name, :article
   @@all = []
 
   def initialize(name)
@@ -29,6 +29,12 @@ class Author
     Article.new(self, magazine, title)
   end
 
+  def topic_areas
+  categories = my_arts.map do |articles|
+    articles.category
+  end
+  categories.uniq!
+  end
 
 
 

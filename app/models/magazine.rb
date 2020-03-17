@@ -29,3 +29,22 @@ class Magazine
   end
 end
 
+def find_by_name(name)
+Magazine.all.find |magazine|
+magazine.name = name
+end
+end
+
+def article_titles
+newvar = Article.all.map do |article|
+  article.magazine == self
+  newvar.title
+end
+end
+
+def contributing_authors
+newvar.map do |articles| #trying to iterate through this 
+  #specific magazine's articles to find authors who have met condition
+  
+end
+
