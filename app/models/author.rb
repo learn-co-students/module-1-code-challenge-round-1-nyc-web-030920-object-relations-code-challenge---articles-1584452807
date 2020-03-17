@@ -21,7 +21,7 @@ class Author
   end
 
   def topic_areas
-    magazines
+    Magazine.contributors {|a| }
   end
 
 end
