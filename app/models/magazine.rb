@@ -18,5 +18,6 @@ class Magazine
 
   def contributors
     article_list.map {|a| a.author}
+  end
 
 end
