@@ -2,16 +2,14 @@ class Magazine
   attr_accessor :name, :category
   @@all = []
 
-
   def initialize(name, category)
     @name = name
     @category = category
     Magazine.all << self
-
   end
 
   def self.all
-    @all
+    @@all
   end
 
   def contributors
@@ -26,7 +24,9 @@ class Magazine
 
   def article_titles
     Article.all.select do |articles_obj|
-      articles_obj.magazine == self 
+      if articles_obj.magazine == self 
+      articles_obj.title
+      end
     end
   end
   
