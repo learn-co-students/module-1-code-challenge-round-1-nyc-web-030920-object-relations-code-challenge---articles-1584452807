@@ -1,4 +1,4 @@
-require 'pry'
+
 require_relative '../config/environment.rb'
 
 def reload
@@ -8,9 +8,11 @@ end
 
 ###  WRITE YOUR TEST CODE HERE ###
 
-tokien = Author.new("J.R.R Tolkien")
+tolkien = Author.new("J.R.R Tolkien")
 
+fantasy = Magazine.new("Fantasy Fans Weekly", "Fantasy")
 
+# tolkien.add_article(fantasy, "My Homely Hobbit")
 
 
 
