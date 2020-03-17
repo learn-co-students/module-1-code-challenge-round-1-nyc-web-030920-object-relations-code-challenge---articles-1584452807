@@ -12,9 +12,8 @@ class Author
   end
 
   def magazines
-    unique_array = []
-    unique_array << articles.map {|articles| articles.magazines}
-    unique_array.uniq
+    mag_array = []
+    mag_array << articles.map {|articles| articles.magazine}.uniq
   end
 
   def add_article(magazine, title)
@@ -23,8 +22,7 @@ class Author
 
   def topic_areas
     unique_array = []
-    unique_array << articles.map {|articles| articles.magazine.category}
-    unique_array.uniq
+    unique_array << articles.map {|articles| articles.magazine.category}.uniq
   end
 
 

@@ -20,6 +20,13 @@ class Magazine
     all_articles.map {|articles| articles.author}
   end
 
+ # def contibuting_authors
+  #  author_list = []
+   # count = 0
+   # contributors.each {|authors| if authors.name > 2 then author_list << authors}
+   # author_list.uniq
+  #end
+
   def self.find_by_name(name)
     Magazine.all.find {|magazine| magazine.name == name}
   end
