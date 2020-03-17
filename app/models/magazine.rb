@@ -30,8 +30,10 @@ class Magazine
   end
 
   def self.find_by_name(name)
-    Magazine.all.find do |magazine_instance|
-      magazine_instance.name == name 
+    Magazine.all.each do |magazine_instance|
+      if magazine_instance.name == name 
+        return magazine_instance
+      end
     end
   end
 
@@ -45,8 +47,8 @@ class Magazine
   #Returns an array of authors who have written more than 2 articles for the magazine
   def contributing_authors
     self.contributors.select do |author_instance|
-      #might return articles for aother magazine?
-      author_instance.articles > 2 
+      
+      author_instance.articles.count > 2 
     end
   end
 
