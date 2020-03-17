@@ -21,7 +21,7 @@ class Author
   def magazines
     articles.map do |article|
       article.magazine
-    end
+    end.uniq
   end
 
   def add_article(magazine, title)
@@ -31,7 +31,7 @@ class Author
   def topic_areas
     magazines.map do |magazine|
       magazine.category
-    end
+    end.uniq
   end
 
 

@@ -26,7 +26,25 @@ class Magazine
     end
   end
 
-  
+  def self.find_by_name(name)
+    Magazine.all.find do |magazine|
+      magazine.name == name
+    end
+  end
+
+  def article_titles
+    articles.map do |article|
+      article.title
+    end
+  end
+
+  def contributing_authors
+
+    contributors.map do |contributor|
+      contributor if contributor.articles.count > 2
+    end.uniq
+
+  end
 
 
 end
