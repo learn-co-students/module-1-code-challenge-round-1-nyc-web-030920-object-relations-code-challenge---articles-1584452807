@@ -26,5 +26,11 @@ class Author
       author.magazine 
     end 
   end 
+
+  # Method to create a new Article instance and associates it with that author and that magazine. 
+  def add_article(magazine, title) 
+    Article.new(self, magazine, title) 
+  end 
+
   
 end
