@@ -108,8 +108,8 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 - `Magazine.find_by_name(name)`
   <!-- - Given a string of magazine's name, this method returns the first magazine object that matches -->
-- `Magazine#article_titles`
-  - Returns an array strings of the titles of all articles written for that magazine
+<!-- - `Magazine#article_titles`
+  - Returns an array strings of the titles of all articles written for that magazine -->
 - `Magazine#contributing_authors`
   - Returns an array of authors who have written more than 2 articles for the magazine
 

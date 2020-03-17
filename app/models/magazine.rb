@@ -31,4 +31,14 @@ class Magazine
     end
   end
 
+  def article_titles
+    articles.map do |article|
+      article.title
+    end
+  end
+
+  def contributing_authors #returns an array of authors that have written more than 2 articles for the magazine
+    self.articles
+  end
+
 end
