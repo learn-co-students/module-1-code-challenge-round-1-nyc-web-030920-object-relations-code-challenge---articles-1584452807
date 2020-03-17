@@ -13,12 +13,18 @@ class Article
         @@all
     end 
 
-    def author 
-        Magazine.all.select do |magazine|
-            magazine.article == self
+    def author
+        Article.all.select do |article|
+            article.author == self  
         end 
     end 
 
+
+    def magazine
+        Article.all.select do |article|
+            article.magazine == self  
+        end 
+    end 
 
 
 end
