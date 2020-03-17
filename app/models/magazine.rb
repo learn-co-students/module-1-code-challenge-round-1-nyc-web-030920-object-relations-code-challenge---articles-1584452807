@@ -46,5 +46,11 @@ class Magazine
 
   end
 
+  def self.categories
+    Magazine.all.select do |magazine|
+      magazine.category
+    end
+  end
+
 
 end
