@@ -1,5 +1,4 @@
 class Article
-#git add . && git commit -m "message"
 #An article **cannot** change its author, magazine, or title after it is has been initialized.
 #Returns the title for that given article
 #Returns the author for that given article
