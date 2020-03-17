@@ -6,8 +6,13 @@ end
 
 
 ###  WRITE YOUR TEST CODE HERE ###
+duncan = Author.new("Duncan")
+stephanie = Author.new("Stephanie")
+steven = Author.new("Steven")
+alba = Author.new("Alba")
+peter = Author.new("Peter")
 
-
+mad = Magazine
 
 
 

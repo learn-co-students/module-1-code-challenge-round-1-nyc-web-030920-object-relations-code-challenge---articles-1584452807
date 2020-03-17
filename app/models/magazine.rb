@@ -24,5 +24,9 @@ class Magazine
     Magazine.all.find {|magazine| magazine.name == name}
   end
 
+  def article_titles
+    all_articles.map {|articles| articles.title}
+  end
+
 
 end
