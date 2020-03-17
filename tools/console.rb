@@ -22,10 +22,6 @@ article4 = Article.new("Why IPL should be cancelled this year?", "Sports", autho
 
 
 
-
-
-
-
 ### DO NOT REMOVE THIS
 binding.pry
 
