@@ -52,5 +52,11 @@ class Magazine
     end
   end
 
+  def self.category_names
+    self.categories.map do |category|
+      category.name
+    end.sort_by{|category| category}
+  end
+
 
 end
