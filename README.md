@@ -1,5 +1,5 @@
 # Object Relations Code Challenge - Articles
-
+first
 For this assignment, you will be working with a Magazine domain.
 
 We have three models: `Author`, `Article`, and `Magazine`.
