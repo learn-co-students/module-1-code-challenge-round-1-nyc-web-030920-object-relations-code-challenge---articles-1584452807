@@ -34,5 +34,12 @@ class Magazine
     end 
   end 
 
-  
+  # Method to return an array of authors who have written more than 2 articles for the magazine. 
+  def contributing_authors 
+    if magazine.contributors.length > 2 
+      Article.all.each do |magazine| 
+        magazine.author 
+      end 
+    end 
+  end  
 end
