@@ -1,3 +1,5 @@
+First commit
+
 # Object Relations Code Challenge - Articles
 
 For this assignment, you will be working with a Magazine domain.
