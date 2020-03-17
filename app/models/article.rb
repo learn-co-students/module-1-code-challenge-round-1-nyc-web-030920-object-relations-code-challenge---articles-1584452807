@@ -13,15 +13,5 @@ class Article
     def self.all 
         @@all 
     end
-
-    #Returns the author for that given article
-    def author
-        self.author 
-    end
-
-    #Returns the magazine for that given article
-    def magazine 
-        self.magazine
-    end
-
+    
 end

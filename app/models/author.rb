@@ -1,3 +1,4 @@
+
 class Author
 
   attr_reader :name
@@ -15,6 +16,7 @@ class Author
   #Returns an array of Article instances the author has written
   def articles
     Article.all.select do |article_instance|
+      bin
       article_instance.author == self 
     end
   end 
