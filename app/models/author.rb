@@ -32,5 +32,10 @@ class Author
     Article.new(self, magazine, title) 
   end 
 
-  
+  # Method to return a unique array of strings with the categories of the magazines the author has contributed to. 
+  def topic_areas 
+    Article.all.map do |author| 
+      author.category 
+    end 
+  end 
 end
