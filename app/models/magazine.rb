@@ -47,14 +47,8 @@ class Magazine
   end
 
   def self.categories
-    Magazine.all.select do |magazine|
+    Magazine.all.map do |magazine|
       magazine.category
-    end
-  end
-
-  def self.category_names
-    self.categories.map do |category|
-      category.name
     end.sort_by{|category| category}
   end
 
