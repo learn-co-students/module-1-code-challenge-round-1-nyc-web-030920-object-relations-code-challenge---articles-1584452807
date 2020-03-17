@@ -18,12 +18,12 @@ magazine4 = Magazine.new("People", "lifestyle")
 article1 = Article.new(author1, magazine1, "Love & HipHop")
 article2 = Article.new(author1, magazine2, "Yea Jeets")
 article3 = Article.new(author1, magazine3, "The rise of Wayne")
-article4 = Article.new(author2, magazine3, "Celebs rock")
+article4 = Article.new(author2, magazine3, "Return of Dipset")
 article5 = Article.new(author3, magazine3, "RIP DJ AM")
-article6 = Article.new(author3, magazine1, "Blink-182 tour review")
+article6 = Article.new(author3, magazine3, "Blink-182 tour review")
 article7 = Article.new(author4, magazine2, "Lets go Jets")
 article8 = Article.new(author3, magazine2, "Nobody likes the Mets")
-
+article9 = Article.new(author3, magazine3, "Lets go giants")
 
 
 

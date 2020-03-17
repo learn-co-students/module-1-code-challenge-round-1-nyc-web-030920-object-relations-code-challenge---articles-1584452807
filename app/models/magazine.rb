@@ -1,5 +1,5 @@
 class Magazine 
-  attr_accessor :name, :category
+  attr_reader :name, :category
 
   @@magazines = []
 
@@ -25,14 +25,18 @@ class Magazine
     contributors.map{|article| article.title}
   end
 
-  #need helper to get authors article count here
-  def article_count
-    
+  #need helpers to get authors article count here
+
+  def article_authors #return an array of strings with author names for magazine
+    contributors.map{|article| article.author.name}
   end
 
-  def contributing_authors #Returns an array of authors who have written more than 2 articles for the magazine
+  def article_count #return hash of author key with count value
+    article_authors.group_by(&:itself).transform_values(&:count) #found on stack overflow (.tally didnt work)
+  end
 
-    contributors.select{|contributor| contributor.article_count >= 2}
+  def contributing_authors #Returns an array (returning hash currently) of authors who have written more than 2 articles for the magazine
+    article_count.select{|k, v| k if v > 2 }
   end
 
 end
