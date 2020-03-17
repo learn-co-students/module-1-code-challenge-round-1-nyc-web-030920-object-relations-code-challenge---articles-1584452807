@@ -16,12 +16,11 @@ class Magazine
     self.articles.map {|article| article.title}
   end
   def contributors
-    # presumably, this should be unique
+    # NOTE: presumably, this should be unique (not mentioned in README)
     self.articles.map {|article| article.author}.uniq
   end
   def contributing_authors
     # authors who have contributed 2+ articles
-    # TODO: testme
     count = {}
     self.articles.each do |article|
       name = article.author.name

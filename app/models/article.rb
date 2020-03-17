@@ -1,7 +1,7 @@
 class Article
 
     @@all = []
-    attr_reader :title, :author, :magazine,
+    attr_reader :title, :author, :magazine
 
     def initialize(author, magazine, title)
         @author = author
